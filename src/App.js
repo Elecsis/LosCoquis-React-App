@@ -7,8 +7,9 @@ import LoginPage from "./pages/LoginPage";
 import CoquiHomePage from "./pages/CoquiHomePage";
 import IsPrivate from "./components/IsPrivate";  
 import IsAnon from "./components/IsAnon"; 
-
-  
+import ErrorPage from "./pages/ErrorPage";
+import CheatSheetHomePage from "./pages/CheatSheetHomePage";
+import CreateCheatSheetPage from "./pages/CreateCheatSheetPage"
  
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
         <Route path="/" element={ <HomePage /> } />
         <Route path="/signup" element={ <SignupPage /> } />
         <Route path="/login" element={ <LoginPage /> } />
-        <Route path="/coqui-home" element={  <CoquiHomePage />   } />
+        <Route path="/coqui-home" element={  <CoquiHomePage /> } />
+        <Route path="/cheatsheet-home" element={  <CheatSheetHomePage /> } />
+        <Route path="/create-cheatsheet" element={  <CreateCheatSheetPage /> } />
+        <Route path="*" element={ <ErrorPage /> } />
       </Routes>
     </div>
   );

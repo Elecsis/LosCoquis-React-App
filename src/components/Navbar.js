@@ -21,8 +21,8 @@ function Navbar() {
       {/*    UPDATE     */}
       {isLoggedIn && (
         <>
-          <Link to="/projects">
-            <button>Fantasy Coquis</button>
+          <Link to="/coqui-home">
+            <button>Fantasy </button>
           </Link>        
           <button onClick={logOutUser}>Logout</button>
           <span>{ username && username.name}</span>
