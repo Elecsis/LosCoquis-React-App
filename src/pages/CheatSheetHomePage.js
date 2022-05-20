@@ -32,25 +32,29 @@ function CheatSheetHomePage (){
 
 
     return(
-        <div>
-            <h2>CheatSheet Home</h2>
-            <p>Please Create, review, edit or delete your cheatsheets</p>
+        <div class="container">
             <div>
-                <Link to="/create-cheatsheet"> <button>Create New cheetsheet</button> </Link>
+                <h2>CheatSheet Home</h2>
+                <p>Please Create, review, edit or delete your cheatsheets</p>                
             </div>
             <div>
+                <Link to="/create-cheatsheet"> <button>Create New cheetsheet</button> </Link>
                 <Link to="/coqui-home"> <button>Go Back to Coqui Home</button> </Link>
             </div>
             <div>
                 <h2> Player Ranking CheatSheet:</h2>
+                <p>(Click on cheatsheet titles to expand lists)</p>
                     { cheatSheet.map(singleCheatSheet => {
                         return (
-                            <div>
-                                <h4>{singleCheatSheet.title}</h4>
-                                {singleCheatSheet.players.map(player => {
+                            <div onClick={(e) => {
+                                console.log(e.currentTarget)
+                                e.currentTarget.classList.toggle('hide-players')
+                            }} className="hide-players">
+                                <h4 style={{textDecoration: 'underline'}}>{singleCheatSheet.title}{' '}</h4>
+                                {singleCheatSheet.players.map((player, index) => {
                                     return (
                                         <div className="playerSelectorBar">
-                                            <p>{ player.player}      {player.pos}     {player.team} </p>
+                                            <p><span>#{index + 1}{' '}</span>{ player.player}      {player.pos}     {player.team} </p>
                                         </div>
                                     );
                                 })}

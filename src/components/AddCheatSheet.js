@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 const API_URL = "http://localhost:5005";
 
@@ -9,6 +10,7 @@ function AddCheatSheet (props) {
     const [errorMessage, setErrorMessage] = useState(null);
     const [title, setTitle] = useState("");
     const handleTitle = (e) => setTitle(e.target.value);
+    const navigate = useNavigate()
     
     const handleSubmit = (e) =>{
       e.preventDefault();
@@ -25,7 +27,10 @@ console.log(requestBody)
         })
         .then((response) => {
           console.log(response,response.data); 
-          
+          setTitle('')
+          props.setSelectedPlayerArray([])
+          navigate('/cheatsheet-home')
+
         })
         .catch((error) => {
           const errorDescription = error.response.data.message;

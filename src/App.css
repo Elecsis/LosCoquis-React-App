@@ -19,8 +19,8 @@
 }
 
 #headerCH {
-  background: url(https://images.unsplash.com/photo-1415795854641-f4a487a0fdc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) center center / cover no-repeat ;
-  height: 200px;
+  background: url(/Users/owner/Desktop/Ironlabs/3rd-Project/loscoquis-react-app/src/images/banner.jpg) center center / cover no-repeat ;
+  height: 475px;
 }
 
 .playerSelectorBar {
@@ -29,6 +29,15 @@
   border: 2px solid black;
 }
 
-#gallery {
+.gallery{
   margin-top: 1rem;
+  margin-left: 3rem;
+  display: flex;  
+  flex-wrap: wrap;
+}
+
+
+
+.hide-players > .playerSelectorBar {
+  display:none;
 }

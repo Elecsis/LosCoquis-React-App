@@ -22,10 +22,10 @@ function CreateCheatSheet () {
           <div><PlayerSelector selectedPlayerArray={ selectedPlayerArray } setSelectedPlayerArray={ setSelectedPlayerArray }/></div>
           <div>
           <h2>Your Player Ranking CheatSheet:</h2>
-            { selectedPlayerArray.map(element => {
+            { selectedPlayerArray.map((element, index) => {
               return(
                 <div className="playerSelectorBar">
-                <p>{ element.player}      {element.pos}     {element.team} </p>
+                <p><span>#{index + 1}{' '}</span>{ element.player}      {element.pos}     {element.team} </p>
                 </div>
               )
             })}
