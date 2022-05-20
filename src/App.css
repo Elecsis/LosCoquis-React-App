@@ -19,7 +19,7 @@
 }
 
 #headerCH {
-  background: url(/Users/owner/Desktop/Ironlabs/3rd-Project/loscoquis-react-app/src/images/banner.jpg) center center / cover no-repeat ;
+  background: url("./images/banner.jpg") center center / cover no-repeat ;
   height: 475px;
 }
 
