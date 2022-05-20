@@ -63,6 +63,7 @@ function PlayerSelector (props){
         <div>
         
             <div className="playSelectorTeamContainer">
+                <h2>Chose the team then the player:</h2>
                 { !isSelecting &&  NFLTeamArray.map((team)=>{
                     return(
                         <button onClick={()=> {
@@ -77,21 +78,23 @@ function PlayerSelector (props){
             <div>
             { isSelecting  && 
                 <>
-                    <button onClick={()=>{setIsSelecting(false)}} >Back to Teams</button>
                     <h2>List of players on { currentTeam }</h2>
+                    <button onClick={()=>{setIsSelecting(false)}} >Back to Teams</button>
                 </>    
             }    
             { isSelecting  && currentTeamPlayers.map((playerInfo) => {
                 return (
-                 <span><p>{ playerInfo.player } {playerInfo.pos}</p> 
-                 <button 
-                    onClick={ () => {
-                        props.setSelectedPlayerArray([
-                            ...props.selectedPlayerArray,
-                            playerInfo
-                        ])
-                    }}
-                 > + </button> </span> 
+                 <div >   
+                    <span class="row" className="playerSelectorBar">{ playerInfo.player } {playerInfo.pos} 
+                    <button 
+                        onClick={ () => {
+                            props.setSelectedPlayerArray([
+                                ...props.selectedPlayerArray,
+                                playerInfo
+                            ])
+                        }}
+                    > + </button> </span>
+                 </div> 
                 )
             })}        
             </div>  

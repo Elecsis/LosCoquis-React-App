@@ -10,6 +10,8 @@ import IsAnon from "./components/IsAnon";
 import ErrorPage from "./pages/ErrorPage";
 import CheatSheetHomePage from "./pages/CheatSheetHomePage";
 import CreateCheatSheetPage from "./pages/CreateCheatSheetPage"
+import TeamsRosterPage from "./pages/TeamsRosterPage"
+
  
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <Route path="/coqui-home" element={  <CoquiHomePage /> } />
         <Route path="/cheatsheet-home" element={  <CheatSheetHomePage /> } />
         <Route path="/create-cheatsheet" element={  <CreateCheatSheetPage /> } />
+        <Route path="/teams-roster" element={  <TeamsRosterPage /> } />
         <Route path="*" element={ <ErrorPage /> } />
       </Routes>
     </div>
