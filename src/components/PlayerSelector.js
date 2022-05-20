@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react"
 import axios from "axios";
 
-const API_URL = "http://localhost:3005/";
+const API_URL = process.env.REACT_APP_NFL_URL;
 
 function PlayerSelector (props){
 
