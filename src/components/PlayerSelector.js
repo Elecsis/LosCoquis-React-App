@@ -85,7 +85,7 @@ function PlayerSelector (props){
             { isSelecting  && currentTeamPlayers.map((playerInfo) => {
                 return (
                  <div >   
-                    <span class="row" className="playerSelectorBar">{ playerInfo.player } {playerInfo.pos} 
+                    <span class="row" className="playerSelectorBar">{ playerInfo.player } { playerInfo.pos } 
                     <button 
                         onClick={ () => {
                             props.setSelectedPlayerArray([
