@@ -22,7 +22,7 @@ function PlayerList() {
         <div>
             { players.map((playerInfo) => {
                 return (
-                 <span><p>{ playerInfo.player } {playerInfo.pos}</p> <button> + </button> </span>   
+                 <span><p>{ playerInfo.player }   { playerInfo.pos}</p> <button> + </button> </span>   
                 )
             })}
             
